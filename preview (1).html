@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuldeep Sarkar | Portfolio</title>
+
+<style>
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#0f172a;
+  color:white;
+}
+
+header {
+  text-align:center;
+  padding:60px 20px;
+}
+
+header h1 {
+  font-size:40px;
+  color:#38bdf8;
+}
+
+header p {
+  color:#94a3b8;
+}
+
+section {
+  padding:40px;
+}
+
+h2 {
+  border-bottom:2px solid #38bdf8;
+  display:inline-block;
+  margin-bottom:20px;
+}
+
+.container {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:#1e293b;
+  padding:20px;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+}
+
+a {
+  color:#38bdf8;
+  text-decoration:none;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Kuldeep Sarkar</h1>
+  <p>MBA Business Analytics | Data Analyst | Power BI | SQL | Python</p>
+  <a href="https://github.com/kdsarkar0212-oss" target="_blank">View GitHub</a>
+</header>
+
+<section>
+<h2>Projects</h2>
+<div class="container" id="projects"></div>
+</section>
+
+<section>
+<h2>Skills</h2>
+<p>Power BI | Tableau | Python | SQL | Excel | Data Visualization | Machine Learning Basics</p>
+</section>
+
+<section>
+<h2>Contact</h2>
+<p>Email: kdsarkar0212@gmail.com</p>
+</section>
+
+<footer>
+© 2026 Kuldeep Sarkar
+</footer>
+
+<script>
+const projects = [
+{
+title: "Healthcare Fraud Detection",
+desc: "Machine learning-based project analyzing fraud patterns in healthcare data",
+link: "https://github.com/kdsarkar0212-oss"
+},
+{
+title: "Power BI Sales Dashboard",
+desc: "Interactive dashboard analyzing sales, profit, and customer trends",
+link: "#"
+},
+{
+title: "Tableau Visualization",
+desc: "Data visualization project using Superstore dataset",
+link: "#"
+},
+{
+title: "Healthcare Analytics Dissertation",
+desc: "Research project with 140+ responses analyzing healthcare efficiency",
+link: "#"
+}
+];
+
+const container = document.getElementById("projects");
+
+projects.forEach(p => {
+container.innerHTML += `
+<div class="card">
+<h3>${p.title}</h3>
+<p>${p.desc}</p>
+<a href="${p.link}" target="_blank">View Project →</a>
+</div>`;
+});
+</script>
+
+</body>
+</html>
